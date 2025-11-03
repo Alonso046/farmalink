@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Ocupa toda la pantalla */
+@layer base {
+  html, body, #root { @apply h-full w-full; }
+  body { @apply m-0 block; }
+}
+
+/* === Variables del tema === */
+/* Oscuro (por defecto) */
+@layer base {
+  :root {
+    --app-bg: var(--color-slate-950);
+    --app-fg: var(--color-slate-100);
+    --card-bg: color-mix(in oklab, var(--app-bg), rgb(242, 34, 34) 7%);
+  }
+
+  /* Claro (al aplicar .light en <html>) */
+  .light {
+    --app-bg: var(--color-slate-100);
+    --app-fg: var(--color-slate-900);
+    --card-bg: rgb(34, 17, 33);
+  }
+}
+
+
+body {
+  background-image: url('https://png.pngtree.com/background/20230610/original/pngtree-colors-of-colorful-light-on-dark-background-wallpaper-hd-the-best-picture-image_3022379.jpg'); /* Reemplaza con la URL de la imagen */
+  background-size: cover; /* Hace que la imagen cubra todo el fondo */
+  background-position: center center; /* Centra la imagen */
+  background-attachment: fixed; /* Hace que el fondo quede fijo al hacer scroll */
+}
+
